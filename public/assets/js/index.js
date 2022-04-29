@@ -25,12 +25,6 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-const postNote = (note) => {
-  noteTitle.appendChild(note)
-  noteText.appendChild(note)
-} 
-// is this right?
-
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -46,8 +40,7 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  })
-  .then((response) => response.json());
+  });
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
