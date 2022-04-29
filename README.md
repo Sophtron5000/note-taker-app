@@ -2,11 +2,8 @@
 
 ## Description 
 
-Here we have a note taking app. This code was refactored and was experiencing run errors. Express.js, Path, Fs, UUIDv4, and Middleware NPM packages were used to add functionality to the app. Express allows the front end to converse with the back end. Path allows access and interaction with the file system. Fs provides functions that interact with the file system. UUIDv4 are unique IDs generally used for identifying information that needs to be unique within . 
+Here we have a note taking app. This code was refactored and was experiencing run errors. Express.js, Path, Fs, UUIDv4, and Middleware NPM packages were used to add functionality to the app. Express allows the front end to converse with the back end. Path allows access and interaction with the file system. Fs provides functions that interact with the file system. UUIDv4 was used to generate a unique ID. In the future UUIDs will be used to add a delete feature.
 
-Here I have created a read me generator. Created using Node.JS and the NPM packages Inquirer, FS, and Path. The interface is through the command line using Node.js. Inquirer is used to generate the questions and responses. FS is used to create the MarkDown file and write to the document. Path is used to pass through the data. 
-
-Testing and debugging proved to be the biggest challenge.
 
 
 ## Table of Contents
@@ -20,7 +17,7 @@ Testing and debugging proved to be the biggest challenge.
 
 ## Usage 
 
-![screen shot](./screenshot.PNG)
+![screen shot](./11-express-homework-demo-01.png)
 
 ## Credits
 
@@ -32,7 +29,7 @@ Sophia Custodia
 
 ## Features
 
-* Node.JS
+* Express.JS
 * NPM Packages
 
 ## License

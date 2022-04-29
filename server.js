@@ -43,7 +43,7 @@ app.post('/api/notes', (req, res) => {
     // Variable for the object we will save
     const newNotes = {
       title,
-      notes,
+      text,
       notes_id: randomUUID(),
     };
 
