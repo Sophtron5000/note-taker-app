@@ -4,6 +4,8 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+const storage = require('../db/storage.js')
+
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -29,7 +31,7 @@ const postNote = (note) => {
   noteTitle.appendChild(note)
   noteText.appendChild(note)
 } 
-// is this right?
+// is this right?^
 
 const getNotes = () =>
   fetch('/api/notes', {
@@ -47,7 +49,14 @@ const saveNote = (note) =>
     },
     body: JSON.stringify(note),
   })
-  .then((response) => response.json());
+  .then((response) => response.json())
+  .then((notes) => {
+    console.log('Successful POST request:', notes);
+    return notes;
+  })
+  .catch((error) => {
+    console.error('Error in PoST request:', error)
+  });
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
